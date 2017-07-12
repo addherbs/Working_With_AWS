@@ -33,7 +33,7 @@ if __name__ == '__main__':
 
 
 
-# Printing List of file naames that are thre in thw buckte
+# Printing List of file names that are there in the bucket
 @app.route('/home', methods= ['GET', 'POST'])
 def show_home():
     if request.method=='GET':
