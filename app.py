@@ -51,6 +51,50 @@ def show_home():
         print ('file Contents = ', this_file_contents)
         s3.Bucket('filebucket1234').put_object(Body=this_file_contents, ContentEncoding='utf-8', Key=final_file_name)
         return redirect('/home')
+		
+
+#Adding delete and download features		
+@app.route('/deleteDownload', methods = ['POST'])
+def delete_download():
+    if request.method == 'POST':
+        operation_keys = request.form.keys()
+        selected_operation = [i for i in operation_keys]
+        print ('Selected operations are', selected_operation)
+        num= request.form['num']
+        range = request.form['range']
+        booleanNumber = False
+        booleanRange = False
+        show_number = 0
+        range1 =1
+        range2 = 0
+        if num:
+            show_number = int(num)
+            booleanNumber = True
+        elif range:
+            range1 = range.split('-')[0]
+            range2 = range.split('-')[1]
+            booleanRange = True
+
+        elif 'selectfiles' in selected_operation:
+            list_of_filenames = []
+            list_of_filevalues = []
+            for key in s3.Bucket ('filebucket1234').objects.all ():
+                get_number = key.key[:2]
+                if booleanNumber == True:
+                    if	get_number == show_number:
+                        mykey = key.key[2:]
+                        myValue = key.value
+                        list_of_filevalues.append(myValue)
+                        list_of_filenames.append (mykey)
+                        break
+                elif booleanRange == True:
+                    if ((get_number >= range1) and (get_number <= range2)):
+                        mykey = key.key[2:]
+                        myValue = key.value
+                        list_of_filevalues.append (myValue)
+                        list_of_filenames.append (mykey)
+
+            return render_template ('index.html', list_of_filenames=list_of_filenames, list_of_filevalues = list_of_filevalues)
 
 
 
