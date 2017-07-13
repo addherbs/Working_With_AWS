@@ -39,3 +39,8 @@ bucket = s3.Bucket('filebucket1234')
 #Deleting a bucket
 def DeleteBucket():
     conn.delete_bucket('mybuckethsiaujdnqwiuskjnd')
+
+# Listing all buckets
+def List_buckets():
+    rs = conn.get_all_buckets()
+    print (rs)
