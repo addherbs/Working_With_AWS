@@ -49,3 +49,14 @@ def List_buckets():
 def CreateBucket():
     my_bucket = 'filebucket1234'
     conn.create_bucket('mybuckethsiaujdnqwiuskjnd', location=Location.EU)
+
+def upload():
+    root = tk.Tk()
+    open = tkf.askopenfile(parent=root,mode='rb',title='Choose a file')
+    abs_path = os.path.abspath(open.name)
+    print (abs_path)
+    fName = os.path.basename(abs_path)
+    fContent=open.read()
+    print(fName)
+    s3.Bucket ('filebucket1234').upload_file (abs_path, fName)
+    print ('Upload Successful')
