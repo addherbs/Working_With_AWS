@@ -29,7 +29,7 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
 
 
 
@@ -51,9 +51,9 @@ def show_home():
         print ('file Contents = ', this_file_contents)
         s3.Bucket('filebucket1234').put_object(Body=this_file_contents, ContentEncoding='utf-8', Key=final_file_name)
         return redirect('/home')
-		
 
-#Adding delete and download features		
+
+#Adding delete and download features
 @app.route('/deleteDownload', methods = ['POST'])
 def delete_download():
     if request.method == 'POST':
@@ -95,13 +95,3 @@ def delete_download():
                         list_of_filenames.append (mykey)
 
             return render_template ('index.html', list_of_filenames=list_of_filenames, list_of_filevalues = list_of_filevalues)
-
-
-
-
-
-
-
-
-
-
