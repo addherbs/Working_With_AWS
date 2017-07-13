@@ -44,3 +44,8 @@ def DeleteBucket():
 def List_buckets():
     rs = conn.get_all_buckets()
     print (rs)
+
+#Creating a bucket
+def CreateBucket():
+    my_bucket = 'filebucket1234'
+    conn.create_bucket('mybuckethsiaujdnqwiuskjnd', location=Location.EU)
