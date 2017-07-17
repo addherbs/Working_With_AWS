@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, make_response
 app = Flask(__name__)
-
+# changed the access key to default values
 AWS_ACCESS_KEY_ID = 'Access Key'
 AWS_SECRET_ACCESS_KEY = 'Secret Key'
 
@@ -13,8 +13,7 @@ s3 = boto3.resource('s3',aws_access_key_id=AWS_ACCESS_KEY_ID,
          aws_secret_access_key=AWS_SECRET_ACCESS_KEY, config=Config(signature_version='s3v4'))
 bucket = s3.Bucket('Your Bucket')
 
-
-
+# this route is defined as the route for the main/index page
 @app.route('/', methods=['GET','POST'])
 def index():
     if request.method == 'GET':
