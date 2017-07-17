@@ -10,6 +10,8 @@ from boto.s3.connection import Location
 from boto.s3.key import Key
 from botocore.client import Config
 
+
+# A list of all the general operations that are available
 AWS_ACCESS_KEY_ID = 'Access Key'
 AWS_SECRET_ACCESS_KEY = 'Secret Key'
 
