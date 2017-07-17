@@ -52,6 +52,7 @@ def CreateBucket():
     my_bucket = 'filebucket1234'
     conn.create_bucket('mybuckethsiaujdnqwiuskjnd', location=Location.EU)
 
+# uploading a file on a bucket in s3
 def upload():
     root = tk.Tk()
     open = tkf.askopenfile(parent=root,mode='rb',title='Choose a file')
