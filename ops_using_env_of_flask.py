@@ -81,6 +81,14 @@ def readCSVFile_1():
 
     conn.commit()
 
+# Direct reading a CSV file from sql function
+def readCSVFile():
+
+    conn = mysql.connection
+    cursor = conn.cursor()
+    cursor.execute('''LOAD DATA LOCAL INFILE 'gg.csv' INTO TABLE boatData FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\r\n' IGNORE 1 LINES''')
+    conn.commit()
+
 
 if __name__ == '__main__':
     app.run()
