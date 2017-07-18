@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6266fb0d-3595-4cc9-bab4-97170f03ba32" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ops_using_env_of_flask.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/database_options.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ops_using_env_of_flask.py" afterPath="$PROJECT_DIR$/ops_using_env_of_flask.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,11 +29,12 @@
       <file leaf-file-name="ops_using_env_of_flask.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ops_using_env_of_flask.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="543">
-              <caret line="30" column="39" lean-forward="true" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+            <state relative-caret-position="627">
+              <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
-                <marker date="1500352044773" expanded="true" signature="465:487" ph="SELECT * FRO... boatData" />
+                <marker date="1500352270809" expanded="true" signature="465:487" ph="SELECT * FRO... boatData" />
+                <marker date="1500352270809" expanded="true" signature="990:1263" ph="CREATE TABLE... boatData" />
               </folding>
             </state>
           </provider>
@@ -357,11 +356,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ops_using_env_of_flask.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="30" column="39" lean-forward="true" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+        <state relative-caret-position="627">
+          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
-            <marker date="1500352044773" expanded="true" signature="465:487" ph="SELECT * FRO... boatData" />
+            <marker date="1500352270809" expanded="true" signature="465:487" ph="SELECT * FRO... boatData" />
+            <marker date="1500352270809" expanded="true" signature="990:1263" ph="CREATE TABLE... boatData" />
           </folding>
         </state>
       </provider>

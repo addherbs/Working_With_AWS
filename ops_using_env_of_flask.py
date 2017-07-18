@@ -34,5 +34,24 @@ def show_index():
     elif request.method == 'POST':
             return render_template('index.html', time_to_execute = 0)
 
+# Added how to create a table
+def create_table():
+    conn = mysql.connection
+    cursor = conn.cursor()
+    cursor.execute( '''CREATE TABLE boatData(
+        pclass varchar(30),
+        survived varchar(30),
+        home_dest varchar(30),
+        name varchar(30),
+        sex varchar(30),
+        age varchar(30),
+        ticket varchar(30),
+        fare varchar(30),
+        cabin varchar(30)
+    );''')
+    conn.commit
+
+
+
 if __name__ == '__main__':
     app.run()
