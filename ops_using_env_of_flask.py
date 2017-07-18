@@ -89,6 +89,26 @@ def readCSVFile():
     cursor.execute('''LOAD DATA LOCAL INFILE 'gg.csv' INTO TABLE boatData FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\r\n' IGNORE 1 LINES''')
     conn.commit()
 
+# Selecting unique columns from a table
+def get_Column():
+
+    queries = ['SELECT home_dest FROM boatData' , 'SELECT name FROM boatData', 'SELECT ticket FROM boatData']
+    conn = mysql.connection
+    cursor = conn.cursor()
+    start = time.time()
+    collect_data = []
+
+    for x in range(500):
+        collect_data.append(cursor.execute(queries[random.randint(0,2)]))
+    conn.commit
+    end = time.time()
+
+    print ('--------------------------------------')
+    time_to_execute = end-start
+    print(time_to_execute)
+    print ('--------------------------------------')
+
+    return time_to_execute, collect_data
 
 if __name__ == '__main__':
     app.run()
