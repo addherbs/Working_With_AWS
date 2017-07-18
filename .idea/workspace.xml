@@ -29,12 +29,13 @@
       <file leaf-file-name="ops_using_env_of_flask.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ops_using_env_of_flask.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+            <state relative-caret-position="21">
+              <caret line="53" column="28" lean-forward="false" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
-                <marker date="1500352270809" expanded="true" signature="465:487" ph="SELECT * FRO... boatData" />
-                <marker date="1500352270809" expanded="true" signature="990:1263" ph="CREATE TABLE... boatData" />
+                <marker date="1500352328642" expanded="true" signature="465:487" ph="SELECT * FRO... boatData" />
+                <marker date="1500352328642" expanded="true" signature="990:1263" ph="CREATE TABLE... boatData" />
+                <marker date="1500352328642" expanded="true" signature="2038:2212" ph="INSERT INTO boatData... " />
               </folding>
             </state>
           </provider>
@@ -356,12 +357,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ops_using_env_of_flask.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+        <state relative-caret-position="21">
+          <caret line="53" column="28" lean-forward="false" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
-            <marker date="1500352270809" expanded="true" signature="465:487" ph="SELECT * FRO... boatData" />
-            <marker date="1500352270809" expanded="true" signature="990:1263" ph="CREATE TABLE... boatData" />
+            <marker date="1500352328642" expanded="true" signature="465:487" ph="SELECT * FRO... boatData" />
+            <marker date="1500352328642" expanded="true" signature="990:1263" ph="CREATE TABLE... boatData" />
+            <marker date="1500352328642" expanded="true" signature="2038:2212" ph="INSERT INTO boatData... " />
           </folding>
         </state>
       </provider>

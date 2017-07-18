@@ -51,6 +51,35 @@ def create_table():
     );''')
     conn.commit
 
+# Reading each row using csv
+def readCSVFile_1():
+    conn = mysql.connection
+    cursor = conn.cursor()
+    # pclass, survived, name, sex, age, ticket, fare, cabin, home_dest = [], [], [], [], [], [], [], [], []
+    with open('gg.csv') as csvfile:
+        reader = csv.DictReader(csvfile)
+        for row_index, row in enumerate(reader):
+            # pclass.append(row['pclass'])
+            # survived.append(row['survived'])
+            # home_dest.append(row['home.dest'])
+            # name.append(row['name'])
+            # sex.append(row['sex'])
+            # age.append(row['age'])
+            # ticket.append(row['ticket'])
+            # fare.append(row['fare'])
+            # home_dest.append(row['home.dest'])
+            cursor.execute('''INSERT INTO boatData(pclass, survived, name, sex, age, ticket, fare, cabin, home_dest)
+				              VALUES("{0}", "{1}", "{2}", "{3}", "{4}", "{5}", "{6}", "{7}", "{8}");'''.format(row['pclass'],
+                                                                                                               row['survived'],
+                                                                                                               row['name'].replace('"', ''),
+                                                                                                               row['sex'],
+                                                                                                               row['age'],
+                                                                                                               row['ticket'],
+                                                                                                               row['fare'],
+                                                                                                               row['cabin'],
+                                                                                                               row['home.dest']))
+
+    conn.commit()
 
 
 if __name__ == '__main__':
