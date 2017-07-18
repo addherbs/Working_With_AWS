@@ -1,0 +1,51 @@
+<!Doctype html>
+<html>
+
+	<head>
+		<title>
+			Display Page
+		</title>
+	</head>
+
+
+	<body >
+
+    <form method="POST" action= "/home" name="MySQL_Redis">
+      <input type="submit" name = "mysql" value= "MySQL"></br>
+      <input type="submit" name = "redis" value= "Redis">
+
+    </form>
+
+		<!-- <p><h3>List of Entries:</h3></p>
+		<table>
+			<tr>
+        pclass, survived, name, sex, age, ticket, fare, cabin, home_dest
+				<th>pclass :     &nbsp &nbsp &nbsp &nbsp &nbsp</th>
+        <th>survived :     &nbsp &nbsp &nbsp &nbsp &nbsp</th>
+        <th>name :     &nbsp &nbsp &nbsp &nbsp &nbsp</th>
+        <th>sex :     &nbsp &nbsp &nbsp &nbsp &nbsp</th>
+        <th>age :     &nbsp &nbsp &nbsp &nbsp &nbsp</th>
+        <th>ticket :     &nbsp &nbsp &nbsp &nbsp &nbsp</th>
+        <th>fare :     &nbsp &nbsp &nbsp &nbsp &nbsp</th>
+        <th>cabin :     &nbsp &nbsp &nbsp &nbsp &nbsp</th>
+        <th>home_dest :     &nbsp &nbsp &nbsp &nbsp &nbsp</th>
+			</tr>
+			{% for list in output_files %}
+				<tr>
+					<th>{{ list[0] }}</th>
+          <th>{{ list[1] }}</th>
+          <th>{{ list[2] }}</th>
+          <th>{{ list[3] }}</th>
+          <th>{{ list[4] }}</th>
+          <th>{{ list[5] }}</th>
+          <th>{{ list[6] }}</th>
+          <th>{{ list[7] }}</th>
+          <th>{{ list[8] }}</th>
+				</tr>
+			{% endfor %}
+		</table> -->
+
+    <p> time_to_execute: {{time_to_execute}} </p>
+
+
+</html>
