@@ -21,6 +21,21 @@ app.config['MYSQL_HOST'] = 'hostname'
 mysql = MySQL(app)
 
 
+def count_rows():
+    conn = mysql.connection
+    cursor = conn.cursor()
+    cursor.execute('SELECT count(*) FROM qData;')
+    data = cursor.fetchall()
+    return data
+
+def plotPy():
+    labels = ['C1', 'C2','C3','C4', 'C5','C6']
+    sizes = [l1, l2, l3, l4, l5 , l6]
+    plt.pie(sizes, labels=labels)
+    plt.show()
+    export.(plt.show(), 'piechart.jpg')
+
+
 def part1():
 
     your_list = []
