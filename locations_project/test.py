@@ -92,10 +92,28 @@ def kmeans_algo(rows):
     print (kmeans.cluster_centers_)
     return kmeans.cluster_centers_ , kmeans.labels_
 
+def copy_to_list():
+    start = time.time()
+
+    conn = mysql.connection
+    cursor = conn.cursor()
+    query = 'select * from data2;'
+    cursor.execute(query)
+
+    list_data = list(cursor.fetchall())
+
+
+    end = time.time()
+    time_to_execute = end-start
+
+    return time_to_execute, list_data
 
 def kmeans(tuple_row):
     c1 = []
     c2 = []
+
+
+
 
 
 if __name__ == '__main__':
