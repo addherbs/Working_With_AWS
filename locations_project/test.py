@@ -66,8 +66,34 @@ def show_index():
     # return render_template('index.html', count = rows )
 
 
+def create_table(tablename):
+    # Postal	House	Sector	City	State	Lat	Long	Bracket	Occupancy	District
 
 
+    conn = mysql.connection
+    cursor = conn.cursor()
+    cursor.execute( '''CREATE TABLE ''' + tablename +'''(
+        Postal varchar(30),
+        House varchar(30),
+        Sector varchar(30),
+        City varchar(30),
+        State varchar(30),
+        Latitude varchar(30),
+        Longitude varchar(30),
+        Bracket varchar(30),
+        Occupancy varchar(30),
+        District varchar(30)
+        );''')
+    conn.commit
+
+def on_column(c1,c2):
+    time_to_execute , rows = copy_to_list()
+    new_time = time.time()
+    estimate = sklearn.cluster.KMeans(n_clusters=6, column=[c1,c2]).fit(rows)
+    get_cluster_centers = estimate.cluster_centers_
+    get_cluster_labels = estimate.labels_
+    new_time_2 = time.time()
+    return get_cluster_labels,get_cluster_centers, (new_time_2 - new_time + time_to_execute)
 
 @app.route('/Check', methods=['GET','POST'])
 def column():
