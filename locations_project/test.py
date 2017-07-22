@@ -92,6 +92,14 @@ def kmeans_algo(rows):
     print (kmeans.cluster_centers_)
     return kmeans.cluster_centers_ , kmeans.labels_
 
+def readCSVFile():
+
+    conn = mysql.connection
+    cursor = conn.cursor()
+    cursor.execute('''LOAD DATA LOCAL INFILE 'data2.csv' INTO TABLE data2 FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\r\n' IGNORE 1 LINES''')
+    conn.commit()
+
+
 def copy_to_list():
     start = time.time()
 
