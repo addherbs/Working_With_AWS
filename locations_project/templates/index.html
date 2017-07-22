@@ -1,0 +1,99 @@
+<!Doctype html>
+<html>
+
+	<head>
+		<title>
+			Display Page
+		</title>
+	</head>
+
+
+	<body >
+		<h1><u> <i>Aditya Pandey, 1001405034        </i></u>	</h1>
+
+
+			On New Table:
+				<form method="POST" action= "/check" name="Mysql">
+		      Column 1:<input type="text" name = "column1" value= ""></br>
+					Column 2:<input type="text" name = "column2" value= ""></br>
+		      <input type="submit" name = "submit" value= "Click Me">
+		    </form>
+
+part1:
+		<p><h3>List of Entries:</h3></p>
+
+		Names:
+		<table>
+			{% for list in names %}
+				<tr>
+					<th>{{ list }}</th>
+
+				</tr>
+			{% endfor %}
+		</table> -->
+
+
+		Cluster1:
+		<table>
+			{% for list in new1 %}
+				<tr>
+					<th>{{ list }}</th>
+
+				</tr>
+			{% endfor %}
+		</table> -->
+
+		Cluster2:
+				<table>
+					{% for list in new2 %}
+						<tr>
+							<th>{{ list }}</th>
+
+						</tr>
+					{% endfor %}
+				</table> -->
+
+				Cluster3:
+				<table>
+					{% for list in new3 %}
+						<tr>
+							<th>{{ list }}</th>
+
+						</tr>
+					{% endfor %}
+				</table> -->
+
+				Cluster4:
+				<table>
+					{% for list in new4 %}
+						<tr>
+							<th>{{ list }}</th>
+
+						</tr>
+					{% endfor %}
+				</table> -->
+				Cluster5:
+				<table>
+					{% for list in new5 %}
+						<tr>
+							<th>{{ list }}</th>
+
+						</tr>
+					{% endfor %}
+				</table> -->
+				Cluster6:
+				<table>
+					{% for list in new6 %}
+						<tr>
+							<th>{{ list }}</th>
+
+						</tr>
+					{% endfor %}
+				</table> -->
+
+    <!-- <p> Total Rows are: {{count}} </p> -->
+
+		<p> time_to_execute: {{time_to_execute}} </p>
+
+
+</html>
