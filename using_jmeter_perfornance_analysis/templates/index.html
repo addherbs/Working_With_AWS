@@ -6,3 +6,48 @@
     Enter the name of the instructor:<input type="text" name="instructors_name">
     <input type="submit">
 </form>
+
+
+
+<h3> Here is a list of all the courses in UTA:</h3>
+<h5> Click on Course Number to enroll </h5>
+
+<form method="POST" action="/displayCourses">
+
+<table>
+<tr>
+
+    <th>	Branch</th>
+    <th>	CourseNumber</th>
+    <th>	Section	    </th>
+    <th>	CourseTitle	</th>
+    <th>	Instructor	</th>
+    <th>	Days	</th>
+    <th>	StartTime	 </th>
+    <th>	EndTime	    </th>
+    <th>	Max	    </th>
+    <th>	Enrolled</th>
+
+</tr>
+
+<tr>
+
+{%  for courses in course_list  %}
+    <tr>>
+
+    <td>{{ courses[0] }}    </td>
+    <td><input type="submit" name ="{{ courses[1] }}" value="{{ courses[1] }}"   >  </td>
+    <td>{{ courses[2] }}    </td>
+    <td>{{ courses[3] }}    </td>
+    <td>{{ courses[4] }}    </td>
+    <td>{{ courses[5] }}    </td>
+    <td>{{ courses[6] }}    </td>
+    <td>{{ courses[7] }}    </td>
+    <td>{{ courses[8] }}    </td>
+    <td>{{ courses[9] }}    </td>
+
+    </tr>
+
+{% endfor %}
+</table>
+</form>>
