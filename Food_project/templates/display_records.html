@@ -1,0 +1,61 @@
+<!Doctype html>
+<>
+
+
+	<head>
+		<title>
+			Display Page
+		</title>
+	</head>
+
+<h1>ADITYA PANDEY, 1001405034, 1:00 PM BATCH</h1>>
+
+	<body >
+	Type the name of the Ingredient to get all food items associated with it:
+   <form method="POST" action= "/listFood" name="home">
+		Ingredient Name: <input type="text" name="item">
+		Calories:<input type="text" name="cal">
+		<input type="submit">
+    </form>
+
+	Type the name of the Ingredient to get count of food items associated with it:
+	<form method="POST" action= "/getCount" name="home">
+		Ingredient Name: <input type="text" name="count"> <input type="submit">
+    </form>
+
+
+	Type the name of the Ingredient to get count of food items associated with it:
+	<form method="POST" action= "/getCount" name="home">
+		Ingredient Name: <input type="text" name="count"> <input type="submit">
+    </form>
+
+	<table>
+			<tr>
+        file , weight , fat, calories, ingredients, type
+        <th>file :     &nbsp &nbsp &nbsp &nbsp &nbsp</th>
+        <th>weight :     &nbsp &nbsp &nbsp &nbsp &nbsp</th>
+        <th>fat :     &nbsp &nbsp &nbsp &nbsp &nbsp</th>
+        <th>calories :     &nbsp &nbsp &nbsp &nbsp &nbsp</th>
+        <th>ingredients :     &nbsp &nbsp &nbsp &nbsp &nbsp</th>
+        <th>type :     &nbsp &nbsp &nbsp &nbsp &nbsp</th>
+
+			</tr>
+			{% for list in data %}
+				<tr>
+					<th>{{ list[0] }}</th>
+          <th>{{ list[1] }}</th>
+          <th>{{ list[2] }}</th>
+          <th>{{ list[3] }}</th>
+          <th>{{ list[4] }}</th>
+          <th>{{ list[5] }}</th>
+          <th>{{ list[6] }}</th>
+
+				</tr>
+			{% endfor %}
+		</table> -->
+
+
+    <p> time_to_execute: {{time_to_execute}} </p>
+
+	</body>>
+</html>
