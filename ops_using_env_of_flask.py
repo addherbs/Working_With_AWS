@@ -24,7 +24,7 @@ def get_user_credentials():
     return data
 
 
-
+#default root '/'
 @app.route('/', methods=['GET','POST'])
 def show_index():
     # readCSVFile()
