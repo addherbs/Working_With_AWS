@@ -26,9 +26,9 @@ def index():
         else:
             return redirect('/')
 
-
+#Causes the app to start
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
 
 
 
