@@ -52,6 +52,7 @@ def CreateBucket():
     my_bucket = 'filebucket1234'
     conn.create_bucket('mybuckethsiaujdnqwiuskjnd', location=Location.EU)
 
+#Uploading function. This function creates a dialogue box to open explorer and select files then upload it into the S3 	Bucket
 def upload():
     root = tk.Tk()
     open = tkf.askopenfile(parent=root,mode='rb',title='Choose a file')
@@ -61,4 +62,4 @@ def upload():
     fContent=open.read()
     print(fName)
     s3.Bucket ('filebucket1234').upload_file (abs_path, fName)
-    print ('Upload Successful')
+    print ('Upload Successfully Completed')
