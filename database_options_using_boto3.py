@@ -27,6 +27,8 @@ bucket = s3.Bucket('Your Bucket')
 
 # conn = S3Connection(access, secretA)
 conn = S3Connection(AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY)
+
+
 # ec2 = session.resource('ec2')
 # s3=session.resource('s3')
 s3 = boto3.resource('s3',aws_access_key_id=AWS_ACCESS_KEY_ID,
@@ -34,13 +36,10 @@ s3 = boto3.resource('s3',aws_access_key_id=AWS_ACCESS_KEY_ID,
 bucket = s3.Bucket('filebucket1234')
 # s3.Object('filebucket1234', 'hello.py').put(Body=open("C:\\Users\\Cyther\\Desktop\\Assignment1\\hello.py", 'rb'))
 
-# mybucket = conn.get_bucket('filebucket1234', validate=False)
-# mybucket.list()
-
 
 #Deleting a bucket
 def DeleteBucket():
-    conn.delete_bucket('mybuckethsiaujdnqwiuskjnd')
+    conn.delete_bucket('BucketName')
 
 # Listing all buckets
 def List_buckets():
@@ -50,7 +49,7 @@ def List_buckets():
 #Creating a bucket
 def CreateBucket():
     my_bucket = 'filebucket1234'
-    conn.create_bucket('mybuckethsiaujdnqwiuskjnd', location=Location.EU)
+    conn.create_bucket('BucketName', location=Location.EU)
 
 # uploading a file on a bucket in s3
 def upload():
